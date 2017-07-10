@@ -7,3 +7,12 @@ Each directory name corresponds to the number of atoms in each system.
   
 The .tpr in each subdirectory of 66K, 100K and 265K is identical. The only thing
 that will need to be changed is the node configuration
+
+submit_batches.sh will go into existing directories and copy batch submission 
+scripts from the Slurm_Scripts directory into each configuration and submit them.
+
+compile_results.sh will create a text document with the number of steps that were
+able to be taken in each node configuration.
+
+plot_scaling.py will interpret the text document from compile_results.sh, do 
+some conversion, and then plot the results. 
